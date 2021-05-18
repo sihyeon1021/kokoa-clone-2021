@@ -1,0 +1,40 @@
+.nav {
+  background-color:#f9f9fa;
+  padding:20px 50px;
+  border-top:1px solid rgba(0,0,0,0.1);
+  position:fixed;
+  bottom:0;
+  width:100%;
+  box-sizing: border-box;
+
+}
+.nav__list {
+  display:flex;
+  justify-content: space-between;
+}
+.nav__link {
+  color:#2e363e;
+  position:relative;
+}
+
+.nav__notification,.nav__point {
+  background-color:tomato;
+  color:white;
+  display:flex;/*flex-container를 block요소로 본다. display:flex-inline이라고 설정하면 flex-container를 inline요소로 인식한다.자식이 아닌 부모를!*/
+  justify-content: center;
+  align-items: center;
+  width:23px;
+  height:23px;
+  border-radius: 50%;
+  font-size:14px;
+  font-weight:bold;
+  position:absolute;
+  right:-10px;
+  top:-16px;
+}
+.nav__point  {
+  width:5px;
+  height:5px;
+  right:-5px;
+  top:-12px;
+}
