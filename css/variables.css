@@ -2,4 +2,6 @@
     --yellow: #fae100;
     --border-color : rgba(0,0,0,0.1);
     --horizontal-space: 25px;
+    --text-color:#2e363e;
+    --text-color-alpha :rgba(0,0,0,0.5);
 }
