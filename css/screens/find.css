@@ -1,23 +1,4 @@
-.find-icons {
-    display:flex;
-    justify-content: space-between;
-    padding-bottom:25px;
-    margin-top:20px;
-}
-.find-icons__icon {
-    display:flex;
-    flex-flow:column;
-    justify-content: space-between;
-    align-items: center;
-}
-.find-icons__icon span {
-    margin-top:10px;
-    text-align: center;
-    font-weight:bold;
-}
-.find-icons__icon span:nth-child(2) {
-    line-height:20px;
-}
+
 .recommended-friends {
     border:2px solid var(--border-color);
     border-right:none;

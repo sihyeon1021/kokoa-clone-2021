@@ -1,0 +1,20 @@
+.icon-row {
+    display:flex;
+    justify-content: space-between;
+    padding-bottom:25px;
+    margin-top:20px;
+}
+.icon-row__icon {
+    display:flex;
+    flex-flow:column;
+    justify-content: space-between;
+    align-items: center;
+}
+.icon-row__icon span {
+    margin-top:10px;
+    text-align: center;
+    font-weight:bold;
+}
+.icon-row__icon span:nth-child(2) {
+    line-height:20px;
+}

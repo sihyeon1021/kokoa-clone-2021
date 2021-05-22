@@ -1,0 +1,31 @@
+.settings-setting {
+    padding:20px 0;
+    border-bottom: 1px solid var(--border-color);
+    display:flex;
+    align-items: center;
+}
+.settings-setting i {
+    margin-right:30px;
+    font-size:25px;
+}
+.settings-text {
+    font-size:18px;
+    font-weight:bold;
+}
+.settings-setting-column {
+    display:flex;
+    align-items: center;
+}
+.settings-setting-column:last-child {
+    margin-left:auto;
+}
+.settings-setting .badge {
+    width:20px;
+    height:20px;
+    font-size:12px;
+    margin-left:10px;
+}
+.settings-setting:nth-child(3) {
+    padding-bottom:50px;
+    border-bottom-color:rgba(0,0,0,0.3);
+}
