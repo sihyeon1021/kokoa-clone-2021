@@ -15,5 +15,118 @@
     top:30px;
 }
 .main-chat {
-    margin-top:100px;
+    margin-top:80px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    font-size:14px;
+    margin-bottom:30px;
+}
+.chat__timestamp {
+    color:white;
+    background-color:#92a4b2;
+    padding:15px;
+    border-radius:25px;
+    margin-bottom:25px;
+}
+
+.message-row {
+    width:100%;
+    display:flex;
+    margin-bottom:25px;
+}
+.message-row img {
+    width:50px;
+    height:50px;
+    border-radius:40%;
+    margin-right:15px;
+}
+.message__author {
+    display:block;
+    margin-bottom:15px;
+}
+.message__info {
+    display:flex;
+    align-items: flex-end;
+}
+.message__bubble {
+    background-color:white;
+    padding:13px;
+    border-radius: 15px;
+    margin-right:8px;
+    border-top-left-radius: 0px;
+    font-size:17px;
+}
+.message__time,.message__author {
+    opacity:0.9;
+    font-size:14px;
+}
+
+.message-row--own {
+    justify-content: flex-end;
+}
+.message-row--own .message__bubble {
+    background-color:var(--yellow);
+    border-top-right-radius: 0px;
+    border-top-left-radius:15px;
+    margin-right:0px;
+    margin-left:5px;
+    /* order:1; */
+} /*이렇게 할 수도 있다.*/
+/* .message-row--own .message__time {
+    order:0;
+} */
+.message-row--own .message__info {
+    flex-direction:row-reverse;
+}
+
+.reply {
+    position:fixed;
+    bottom:0;
+    width:100%;
+    background-color:white;
+    display:flex;
+    justify-content: space-between;
+    padding:5px 25px;
+    box-sizing: border-box;
+    align-items:center;
+}
+.reply i {
+    opacity:0.6;
+}
+.reply .reply__column:first-child {
+    width:10%;
+}
+.reply .reply__column:last-child {
+    width:90%;
+    position:relative;
+}
+.reply__column:last-child  > i, .reply__column:last-child button {
+    position:absolute;
+    right:0;
+    top:10px;
+}
+.reply__column:last-child > i {
+    right:40px;
+}
+.reply__column:last-child button  {
+    top:3px;
+    background-color:var(--yellow);
+    border:none;
+    width:28px;
+    height:28px;
+    border-radius:50%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.reply__column:last-child button i {
+    opacity:1;
+}
+.reply  input {
+    height:30px;
+    width:100%;
+    border: 1px solid var(--border-color);
+    border-radius:20px;
+    padding-left:20px;
 }
