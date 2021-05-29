@@ -32,6 +32,16 @@
 .user-component__column:last-child {
     color:rgba(0,0,0,0.6);
 }
+@keyframes hideSplashScreen {
+    from {
+        opacity:1;
+    }
+    to {
+        opacity:0;
+        visibility: hidden;
+    }
+
+}
 #splash-screen {
     background-color:var(--yellow);
     position:absolute;
@@ -43,4 +53,6 @@
     align-items: center;
     color:#3C1E1E;
     font-size:120px;
+    animation:hideSplashScreen 0.4s ease-in-out forwards; /*forwards 는 마지막 keyframse값을 기억하고 그대로 유지한다.*/
+    animation-delay: 1s;
 }

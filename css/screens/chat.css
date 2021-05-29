@@ -6,7 +6,7 @@
 }
 .chat-screen {
     background-color:#abc1d1;
-    height:1000vh;
+    height:500vh;
 }
 .chat-screen .alt-header {
     position:fixed;
@@ -14,6 +14,18 @@
     box-sizing: border-box;
     top:30px;
 }
+
+@keyframes fadeIn {
+    from{
+        transform:translateY(10px);
+        opacity:0;
+    }
+    to{
+        transform:none;
+        opacity:1;
+    }
+}
+
 .main-chat {
     margin-top:80px;
     display:flex;
@@ -21,6 +33,7 @@
     align-items: center;
     font-size:14px;
     margin-bottom:30px;
+    animation: fadeIn 0.5s linear;
 }
 .chat__timestamp {
     color:white;
@@ -44,6 +57,37 @@
 .message__author {
     display:block;
     margin-bottom:15px;
+}
+@keyframes messageInfoAppear {
+    from{
+        
+        transform:translateX(-20px);
+    }
+    to{
+        opacity:1;
+        transform:none;
+    }
+}
+.message-row .message__info  {
+    opacity: 0;
+    animation: messageInfoAppear 0.5s linear forwards;
+    animation-delay:0.3s;
+}
+@keyframes messageOwnInfoAppear {
+    from{
+        
+        transform:translateX(20px);
+    }
+    to{
+        opacity:1;
+        transform:none;
+    }
+}
+
+.message-row--own .message__info {
+    opacity: 0;
+    animation: messageOwnInfoAppear 0.5s linear forwards;
+    animation-delay:0.6s;
 }
 .message__info {
     display:flex;
@@ -90,6 +134,7 @@
     padding:5px 25px;
     box-sizing: border-box;
     align-items:center;
+    transition: transform 0.3s ease-in-out;
 }
 .reply i {
     opacity:0.6;
@@ -129,4 +174,25 @@
     border: 1px solid var(--border-color);
     border-radius:20px;
     padding-left:20px;
+    transition:all 0.3s ease-in-out;
+}
+
+.reply .reply__column:first-child,
+.reply .fa-smile-wink, 
+.reply button {
+    transition:opacity 0.3s ease-in-out;
+}
+
+.reply:focus-within .reply__column:first-child,
+.reply:focus-within .fa-smile-wink, 
+.reply:focus-within button {
+    opacity:0;
+}
+.reply input:focus {
+    width:90vw;
+    transform:translateX(-13%) translateY(-80px);
+}
+
+.reply:focus-within {
+    transform:translateY(80px);
 }
